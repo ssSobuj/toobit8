@@ -1,0 +1,23 @@
+.btn-download-app{
+  min-width: 17.33333vw;
+  padding: 0 1.33333vw;
+  border-radius: .8vw;
+  text-align: center
+}
+
+.btn-download-app .icon {
+  margin-right: 1.06667vw;
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.2vw;
+  height: 3.2vw;
+  background: url(../images/download_icons.svg);
+  background-size: contain
+}
+.null-record {
+  margin-top: 4vw;
+  padding-top: 21.33333vw;
+  background: url(../images/invest_no_record.png) no-repeat 50% 0/29.33333vw 20vw;
+  text-align: center;
+  grid-area: span 2/span 2
+}

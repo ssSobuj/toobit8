@@ -1,0 +1,101 @@
+/* Floating Button */
+.floating-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.button-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Overlay */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.drawer-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Drawer */
+.drawer-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #18181b; /* Zinc-900 equivalent */
+  color: white;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 24px;
+  transition: transform 0.3s ease;
+}
+
+.slide-up {
+  transform: translateY(0%);
+}
+
+.slide-down {
+  transform: translateY(100%);
+}
+
+.drawer-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.drawer-description {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #d4d4d8; /* Gray-300 */
+  margin-bottom: 16px;
+}
+
+.support-box {
+  background: #27272a; /* Zinc-800 */
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.support-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.support-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.support-text {
+  font-weight: 500;
+  color: white;
+}
+
+.support-arrow {
+  font-size: 1.5rem;
+}

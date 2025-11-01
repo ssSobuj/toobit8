@@ -1,0 +1,36 @@
+/* src/Pages/Notice.css */
+/* Tweak these values to match your exact visual style (opacity, blur, colors) */
+
+.notice-item-content {
+  transition: all 200ms ease;
+  will-change: opacity, transform, filter;
+}
+
+/* When read, fade + slightly desaturate to match your screenshot */
+.notice-item-content.is-read {
+  opacity: 0.36; /* main fade */
+  filter: grayscale(0.08) brightness(0.86);
+  transform: translateY(0); /* placeholder if you want small motion later */
+}
+
+/* subtle change for envelope icon when read */
+.notice-item-content.is-read .i-ph-envelope-simple {
+  opacity: 0.45;
+  transform: scale(0.98);
+}
+
+/* dim the main title text a little */
+.notice-item-content.is-read .info {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Timestamp lighter */
+.notice-item-content.is-read .c-\$text-gray {
+  color: rgba(255, 255, 255, 0.44);
+}
+
+/* Keep dashed border but make it a touch less prominent when read */
+.notice-item-content.is-read {
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
