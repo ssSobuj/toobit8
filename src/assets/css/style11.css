@@ -5061,7 +5061,7 @@ html{
 }
 
 .index-wrap .membership-list .membership-content[data-v-1b3f4761] {
-    max-height: 120px;
+    max-height: 500px;
     margin: 10px 0
 }
 
@@ -10769,4 +10769,132 @@ html{
 }
 .order_list li{
     list-style-type: order;
+}
+
+
+
+
+.unique-carousel-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  height: 320px;
+}
+
+.carousel-image {
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(85%);
+  transition: transform 1.5s ease;
+}
+
+.carousel-item.active .carousel-image {
+  transform: scale(1.05);
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.25)
+  );
+  z-index: 1;
+}
+
+/* Caption text */
+.carousel-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 90%;
+  text-align: center;
+}
+
+.slide-caption {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  animation: fadeInUp 1s ease;
+}
+
+/* Responsive text for mobile */
+@media (max-width: 768px) {
+  .unique-carousel-wrapper {
+    height: 220px;
+  }
+
+  .carousel-image {
+    height: 220px;
+  }
+
+  .slide-caption {
+    font-size: 1.1rem;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+
+  .carousel-caption {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .unique-carousel-wrapper {
+    height: 180px;
+  }
+
+  .carousel-image {
+    height: 180px;
+  }
+
+  .slide-caption {
+    font-size: 1rem;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ Custom pagination dots ✨ */
+.carousel-indicators [data-bs-target] {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transform: scale(1.3);
+}
+
+/* Center indicators */
+.carousel-indicators {
+  bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }

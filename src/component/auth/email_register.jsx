@@ -266,7 +266,7 @@ function App() {
                     </div>
                     <div
                       id="accountError"
-                      className="van-field__error-message"
+                      className="van-field__error-message text-white"
                       style={{ display: errors.account ? "block" : "none" }}
                     >
                       {errors.account}
@@ -279,7 +279,7 @@ function App() {
                         <div className="flex items-center">
                           <div data-v-c7a345ea="" className="ml-0!">
                             <div data-v-c7a345ea="" onClick={handleTelView}>
-                              <span className="input-phone-select">
+                              <span className="input-phone-select text-white">
                                 {selectedCode}
                               </span>
                             </div>
@@ -297,7 +297,7 @@ function App() {
                     </div>
                     <div
                       id="accountError"
-                      className="van-field__error-message"
+                      className="van-field__error-message text-white"
                       style={{
                         display: errors.mobile_number ? "block" : "none",
                       }}
@@ -336,7 +336,7 @@ function App() {
                     </div>
                     <div
                       id="loginPasswordError"
-                      className="van-field__error-message"
+                      className="van-field__error-message text-white"
                       style={{
                         display: errors.password ? "block" : "none",
                       }}
@@ -374,7 +374,7 @@ function App() {
                     </div>
                     <div
                       id="loginPasswordError"
-                      className="van-field__error-message"
+                      className="van-field__error-message text-white"
                       style={{
                         display: errors.security ? "block" : "none",
                       }}
@@ -399,7 +399,7 @@ function App() {
                     </div>
                     <div
                       id="accountError"
-                      className="van-field__error-message"
+                      className="van-field__error-message text-white"
                       style={{
                         display: errors.invitation_code ? "block" : "none",
                       }}
@@ -430,7 +430,7 @@ function App() {
                     </button>
 
                     <div className="mt-20px cursor-pointer text-center text-sm">
-                      <span className="text-$text-gray6">
+                      <span className="text-$text-gray6 text-white">
                         {t("already_have_an_account")}
                       </span>
                       <span className="ml-5px text-$primary">

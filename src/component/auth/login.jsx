@@ -159,7 +159,7 @@ function App() {
                   </div>
                   <div
                     id="accountError"
-                    className="van-field__error-message"
+                    className="van-field__error-message text-white"
                     style={{ display: errors.account ? "block" : "none" }}
                   >
                     {errors.account}
@@ -195,7 +195,7 @@ function App() {
                   </div>
                   <div
                     id="loginPasswordError"
-                    className="van-field__error-message"
+                    className="van-field__error-message text-white"
                     style={{ display: errors.password ? "block" : "none" }}
                   >
                     {errors.password}
@@ -213,7 +213,7 @@ function App() {
                   </button>
 
                   <div className="mt-20px cursor-pointer text-center text-sm">
-                    <span className="text-$text-gray6">{t("no_account")}</span>
+                    <span className="text-$text-gray6 text-white">{t("no_account")}</span>
                     <span className="ml-5px text-$primary">
                       <Link to="/register">{t("register")}</Link>
                     </span>

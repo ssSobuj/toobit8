@@ -44,7 +44,7 @@ export default function ScrollTopButton() {
         width: 40,
         height: 40,
         borderRadius: "8px", // rounded corners instead of circular
-        backgroundColor: "#7DD3FC", // light blue/teal to match image
+        background: "linear-gradient(135deg,#015CFF, #FFD700, #0e3784ff)", // gold to blue gradient
         color: "#1F2937", // darker color for the arrow
         border: "none",
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",

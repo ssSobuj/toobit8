@@ -43,7 +43,7 @@ const HomeWithdrawal = () => {
   return (
     <div data-v-1b3f4761="" className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text membership-list">
       <div data-v-1b3f4761="" className="base-section-title">{t("profit_withdrawal")}</div>
-      <div data-v-1b3f4761="" className="swiper swiper-initialized swiper-vertical membership-content">
+      <div data-v-1b3f4761="" className="swiper swiper-initialized swiper-vertical membership-content max-h-[500px]">
         <div data-v-1b3f4761="" className="swiper-wrapper">
           {dataList.map((item, index) => (
             <AnimatePresence key={`${index}-${item.name}`}>

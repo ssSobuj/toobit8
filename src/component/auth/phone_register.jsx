@@ -192,7 +192,7 @@ function App() {
                                 login-content=""
                                 onClick={toggleCountryPopUp}
                               >
-                                <span className="input-phone-select">
+                                <span className="input-phone-select text-white">
                                   +
                                   <span id="countryCode">
                                     {selectedCountry}

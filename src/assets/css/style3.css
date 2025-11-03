@@ -51,7 +51,8 @@
   width: 100%;
   height: 100%;
   background: transparent;
-  font-size: 14px
+  font-size: 14px;
+  color:white;
 }
 
 .base-input .input-box input::-webkit-input-placeholder,.base-input .input-box textarea::-webkit-input-placeholder {

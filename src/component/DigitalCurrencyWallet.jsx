@@ -172,7 +172,7 @@ const DigitalCurrencyWallet = () => {
                   </div>
                   <div
                     id="walletError"
-                    className="van-field__error-message"
+                    className="van-field__error-message text-white"
                     style={{
                       display: errors.wallet ? "block" : "none",
                     }}
@@ -216,7 +216,7 @@ const DigitalCurrencyWallet = () => {
                   </div>
                   <div
                     id="passwordError"
-                    className="van-field__error-message"
+                    className="van-field__error-message text-white"
                     style={{
                       display: errors.password ? "block" : "none",
                     }}
@@ -241,7 +241,7 @@ const DigitalCurrencyWallet = () => {
                   </div>
                   <div
                     id="confirmPasswordError"
-                    className="van-field__error-message"
+                    className="van-field__error-message text-white"
                     style={{
                       display: errors.confirm_password ? "block" : "none",
                     }}

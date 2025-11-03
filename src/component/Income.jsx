@@ -118,7 +118,7 @@ const Income = () => {
             </div>
           )}
 
-          <div className="pb-60px">
+          <div className="pb-60px mt-4">
             <div data-v-ca6100e8="" className="quan-wrap pt-61px pb-80px">
               <IncomeTop data={data} />
               <IncomeQuantify setStartIncome={setStartIncome} data={data} />

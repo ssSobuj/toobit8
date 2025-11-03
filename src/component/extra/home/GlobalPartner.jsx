@@ -1,10 +1,10 @@
 import wazirX from "../../../assets/images/wazirX.png";
 import coindcx from "../../../assets/images/coindcx.png";
-import okey from "../../../assets/images/okey.png";
+import okey from "../../../assets/images/okex.png";
 import bitmain from "../../../assets/images/bitmain.png";
 import binance from "../../../assets/images/binance.png";
 import huobi from "../../../assets/images/huobi.png";
-import tron from "../../../assets/images/tron.png";
+import tron from "../../../assets/images/tron_image.png";
 import least_authority from "../../../assets/images/least_authority.png";
 import coinbase from "../../../assets/images/coinbase.png";
 import { useTranslation } from "react-i18next";
@@ -36,7 +36,7 @@ const GlobalPartner = () => {
         <img src={huobi} alt="" />
         </div>
         <div href="#" className="grid-item">
-        <img src={okey} alt="" />
+        <img style={{maxWidth:'205px'}} src={okey} alt="" />
         </div>
       </div>
     </div>
