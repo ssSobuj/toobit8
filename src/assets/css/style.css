@@ -22548,7 +22548,7 @@ video {
 .c-\$text-gray,
 .text-\[var\(--text-gray\)\],
 .text-\$text-gray {
-  color: var(--text-gray)
+  color: white;
 }
 
 .c-\$text-gray6,
@@ -23779,7 +23779,8 @@ video {
 
 .van-toast__loading {
   padding: var(--van-padding-base);
-  color: var(--van-toast-loading-icon-color)
+  color: var(--van-toast-loading-icon-color);
+  height: 100vh;
 }
 
 .van-toast__text {
@@ -34908,7 +34909,13 @@ html {
   --tg-viewport-stable-height: 100vh;
   --vh: 6.59px;
   --primary: #79BCCF;
-  --bg: linear-gradient(180deg, #1A549E 0%, #030101 56%);
+  /* --bg: linear-gradient(180deg, #1A549E 0%, #030101 56%); */
+  /* --bg: linear-gradient(135deg, #1c1124, #3d1e4f); */
+  /* --bg: linear-gradient(135deg, #3C0E5E, #7A2ABF); */
+  /* --bg:  linear-gradient(135deg, #240046, #5A189A, #9D4EDD); */
+  --bg: linear-gradient(135deg,#005cff,#826E00,#002668);
+
+
   --bg-input: #23426C;
   --btn-bg: linear-gradient(155deg, #6D9AD6 13%, #79A6E4 47%, #4A7CC0 91%);
   --base-btn-text: #FFFFFF;
@@ -34923,6 +34930,8 @@ html {
 .a-t-30 .font-playgram {
   font-family: Playgram, Helvetica Neue, Helvetica, sans-serif
 }
+
+
 
 .a-t-30.btn-fixed {
   position: fixed;
@@ -35046,7 +35055,8 @@ html {
   padding: 0 16px;
   box-sizing: border-box;
   height: 52px;
-  background: var(--bg-input);
+  /* background: var(--bg-input); */
+  border: 1px solid white;
   position: relative;
   display: flex;
   align-items: center;
@@ -35145,12 +35155,12 @@ html {
 }
 
 .a-t-30 .base-section-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   background-image: var(--base-user-tab-color);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35172,7 +35182,7 @@ html {
 }
 
 .a-t-30 .container-login.c-1 {
-  background: url(../images/login-bg.png) no-repeat;
+  /* background: url(../images/login-bg.png) no-repeat; */
   background-size: 100% auto;
   width: 100%;
   height: 100%;
@@ -35180,7 +35190,7 @@ html {
 }
 
 .a-t-30 .container-login.c-1 .login-content {
-  background: linear-gradient(180deg,#1f406acc,#070404cc 99%);
+  background: #0149D4;
 }
 
 .a-t-30 .container-login.c-2 {
@@ -35348,7 +35358,8 @@ html {
 }
 
 .a-t-30 .tab-bar-wrap .tab-bar {
-  background: var(--bg-tab)
+  background: #0132A8 ;
+  opacity: 0.8;
 }
 
 .a-t-30 .tab-bar-wrap .tab-bar .tab-item {

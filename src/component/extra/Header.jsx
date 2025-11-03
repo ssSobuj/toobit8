@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useTranslation } from "react-i18next";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo2.png";
 import noticeIcon from "../../assets/images/notice-icon.png";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -77,7 +77,7 @@ const Header = () => {
 
   return (
     <header ref={headerRef} className="nav-bar-wrap" style={{ "--47031f5d": "0" }}>
-      <div className="nav-bar px-mg">
+      <div className="nav-bar px-1">
         <div id="navBarItem19" className="nav-bar-content h-full w-full">
           <div className="left name font-playgram">
             <div className="base-logo flex items-center small-logo">
@@ -89,7 +89,7 @@ const Header = () => {
                 style={{ minWidth: "40px", minHeight: "40px" }}
               />
             </div>
-            <span className="font-playgram text-truncate ml-1">MEASURE QUANT</span>
+            <span className="font-playgram text-truncate ml-1">TOBBIT</span>
           </div>
 
           <div className="right">

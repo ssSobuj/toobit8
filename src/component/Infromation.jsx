@@ -74,7 +74,7 @@ const Infromation = () => {
                       </ul>
                       <br />
                       <p>
-                        <strong>Measure Quant</strong> {t("platform_mission")}
+                        <strong>Tobbit</strong> {t("platform_mission")}
                       </p>
                       <p className="mt-3">{t("platform_future_line")}</p>
                     </div>

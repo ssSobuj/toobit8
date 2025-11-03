@@ -130,7 +130,7 @@ const TransferToSmartAccount = () => {
                   draggable="false"
                   alt="logo"
                 />
-                <div className=":uno: site-name ml-8px">MEASURE QUANT</div>
+                <div className=":uno: site-name ml-8px">TOBBIT</div>
               </div>
               {/* logo ends */}
               <div data-v-1a8f829d className="mt-20px">

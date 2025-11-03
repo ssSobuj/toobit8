@@ -247,7 +247,7 @@ const Share = () => {
             {/* team-wrap-content ends */}
             <div className="flex items-center w-full px-11px pt-16px pb-22px bg-$bg-card">
               <div
-                className={`mr-30px font-bold text-lg cursor-pointer ${
+                className={`mr-30px font-bold text-lg cursor-pointer text-white ${
                   activeTab === "recharge"
                     ? "border-b-2px border-solid border-$primary text-$primary!"
                     : ""
@@ -257,7 +257,7 @@ const Share = () => {
                 {t("recharge")}
               </div>
               <div
-                className={`mr-30px font-bold text-lg cursor-pointer ${
+                className={`mr-30px font-bold text-lg cursor-pointer text-white  ${
                   activeTab === "dailyCommisions"
                     ? "border-b-2px border-solid border-$primary text-$primary!"
                     : ""
@@ -271,7 +271,7 @@ const Share = () => {
             {/* Tab Content */}
             <div className="mt-10px">
               {activeTab === "recharge" && (
-                <div className="p-$mg bg-$bg-card">
+                <div className="p-$mg bg-$bg-card text-white" >
                   {t("invited_friends_recharge_rebates")}
                   <div className="reward_list">
                     <div className="reward_box :uno: container-card relative rd-$card-radius c-$btn-text">
@@ -303,7 +303,7 @@ const Share = () => {
               )}
 
               {activeTab === "dailyCommisions" && (
-                <div className="p-$mg bg-$bg-card">
+                <div className="p-$mg bg-$bg-card text-white">
                   {t("invited_friends_daily_commissions")}
                   <div className="reward_list">
                     <div className="reward_box :uno: container-card relative rd-$card-radius c-$btn-text">

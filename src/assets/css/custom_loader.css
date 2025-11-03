@@ -1,39 +1,75 @@
 /* custom_loader.css */
-.loader-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%); /* Safari and older browsers */
-    width: 100px;
-    
-    height: 100px;
+
+/*
+   The .loader-container and .loader CSS you provided previously are not
+   being used by your current Loader.js component's JSX, which uses Vant classes.
+   I've omitted them here to focus on the Vant-based fix.
+   If you intend to use that custom spinner, your JSX would need to change.
+*/
+
+/* ========================================================================= */
+/* Vant-related styles for the full-screen loader overlay                  */
+/* This is the crucial part to fix the scrollbar issue with your Vant JSX. */
+/* ========================================================================= */
+
+.van-popup {
+  position: fixed;
+  /* Ensure it covers the whole screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;   /* Take full viewport width */
+  height: 100vh;  /* Take full viewport height */
+  max-width: none; /* Override any max-width property from Vant defaults */
+  max-height: none; /* Override any max-height property from Vant defaults */
+
+  /* Ensure the popup itself does not scroll */
+  overflow: hidden;
+
+  /* Use flexbox to perfectly center the content (the spinner) */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+
+  background-color: rgba(0, 0, 0, 0.7); /* Example: Semi-transparent dark background */
+  z-index: 2003; /* Use the z-index from your JSX directly */
+  /* Remove any transforms from the .van-popup--center if you're making it full screen */
+  transform: none !important; /* Important to override Vant's default centering transform */
+}
+
+/* Override .van-popup--center specific styles that might conflict */
+.van-popup--center {
+  /* These properties are now handled by the .van-popup itself for full-screen centering */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: none !important; /* Crucial to prevent conflicting transforms */
+}
+
+/* Ensure the toast's inner content (the loading spinner) is also centered and not causing issues */
+.van-toast.van-toast--middle.van-toast--loading {
+    /* Set display flex here too for direct centering of its children if needed,
+       though the .van-popup flex properties should handle it. */
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Use rgba for consistent transparency */
-    z-index: 9999;
-    border-radius: 10px;
-    -webkit-border-radius: 10px; /* Safari and older browsers */
+    justify-content: center;
+    /* Optional: Set background to transparent or a subtle color if you want.
+       The main background will be from .van-popup */
+    background-color: transparent;
 }
 
-
-.loader {
-	border: 1px solid #454546;
-	border-top: 1px solid #fff;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	animation: spin 2s linear infinite;
-	-webkit-animation: spin 2s linear infinite;
+/* You might want to style the actual Vant spinner more if needed, e.g.: */
+.van-loading__spinner--spinner {
+    /* If you want to change its size or color, for example */
+    color: #fff; /* Example: white spinner blades */
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+/* If the original spinner-blade CSS was intended for the van-loading__line,
+   you'd need to adapt it. Vant typically handles its own blade animations. */
 
-@-webkit-keyframes spin { /* Safari and older browsers */
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
+/*
+  The keyframes for 'spin' are not used by the Vant spinner blades (van-loading__line).
+  Vant has its own internal animations for these.
+*/

@@ -78,6 +78,7 @@ const HomeLinks = () => {
     <div
       data-v-1b3f4761=""
       className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text tools-part"
+      style={{ background:'#103795' }}
     >
       <Link data-v-1b3f4761="" to="/recharge" className="part">
         <li data-v-1b3f4761="" className="wrap">
@@ -135,17 +136,7 @@ const HomeLinks = () => {
         </li>
       </Link>
 
-      <Link data-v-1b3f4761=""
-        to="#"
-        className="part"
-      >
-        <li data-v-1b3f4761="" className="wrap">
-          <div data-v-1b3f4761="" className="img-wrap">
-            <img data-v-1b3f4761="" src={app_icon} />
-          </div>
-          <div data-v-1b3f4761="" className="label">{t("app")}</div>
-        </li>
-      </Link> */}
+  */}
 
       <Link data-v-1b3f4761="" to="/agent-coperation" className="part">
         <li data-v-1b3f4761="" className="wrap">
@@ -176,6 +167,18 @@ const HomeLinks = () => {
           <div data-v-1b3f4761="" className="label">
             {t("activity")}
           </div>
+        </li>
+      </Link>
+
+           <Link data-v-1b3f4761=""
+        to="#"
+        className="part"
+      >
+        <li data-v-1b3f4761="" className="wrap">
+          <div data-v-1b3f4761="" className="img-wrap">
+            <img data-v-1b3f4761="" src={app_icon} />
+          </div>
+          <div data-v-1b3f4761="" className="label">{t("app")}</div>
         </li>
       </Link>
 

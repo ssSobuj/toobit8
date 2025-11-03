@@ -4906,12 +4906,14 @@ html{
 
 .index-wrap .asserts-part .assert[data-v-1b3f4761]:nth-of-type(1) {
     background: url(../images/assert-bg.png) center no-repeat;
-    background-size: 100% 100%
+    background-size: 100% 100%;
+    color: #fff
 }
 
 .index-wrap .asserts-part .assert[data-v-1b3f4761]:nth-of-type(2) {
     background: url(../images/assert-bg.png) center no-repeat;
-    background-size: 100% 100%
+    background-size: 100% 100%;
+        color: #fff
 }
 
 .index-wrap .tools-part[data-v-1b3f4761] {

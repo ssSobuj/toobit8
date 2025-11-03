@@ -24,18 +24,18 @@ const CompanyProfile = () => {
                 </p>
                 <br />
                 <p>
-                  <strong>MEASURE QUANT</strong> is an advanced quantitative
+                  <strong>TOBBIT</strong> is an advanced quantitative
                   trading system powered by artificial intelligence technology.
                   Its core capability lies in the automatic execution of trading
                   strategies to maximize investment returns while minimizing
-                  risk. Specifically, MEASURE QUANT transforms investment
+                  risk. Specifically, TOBBIT transforms investment
                   decisions into executable computer algorithms, enabling
                   transparent, efficient, and rapid trading operations that
                   adapt seamlessly to real-time market fluctuations.
                 </p>
                 <br />
                 <p>
-                  MEASURE QUANT’s trading strategies are grounded in modern
+                  TOBBIT’s trading strategies are grounded in modern
                   mathematics, statistics, machine learning, and continuous
                   analysis of market trends and digital asset prices to
                   determine the most effective trading actions. Through complex
@@ -52,7 +52,7 @@ const CompanyProfile = () => {
                 </p>
                 <br />
                 <p>
-                  In essence, MEASURE QUANT is a next-generation quantitative
+                  In essence, TOBBIT is a next-generation quantitative
                   trading system that merges artificial intelligence with modern
                   financial theory to automatically implement strategies aimed
                   at maximizing profit and minimizing risk.

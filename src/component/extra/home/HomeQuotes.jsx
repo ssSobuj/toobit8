@@ -160,7 +160,7 @@ const HomeQuotes = () => {
                     <h6 className="mb-0 fw-bold text-white">{c.title}</h6>
                     <small className="text-gray-200">
                       24h:{" "}
-                      <span className={rise ? "text-success" : "text-danger"}>
+                      <span className={rise ? "text-white" : "text-danger"}>
                         {rise ? "+" : ""}
                         {change}%
                       </span>

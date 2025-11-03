@@ -1,4 +1,4 @@
-.spinner {
+/* .spinner {
   font-size: 28px;
   position: relative;
   display: inline-block;
@@ -165,4 +165,95 @@
   100% {
     background-color: transparent;
   }
+} */
+
+
+
+/*
+ * Your existing .spinner and .spinner-blade styles (if you are still using them somewhere,
+ * though your React component uses Vant's classes) would go here.
+ * For this fix, we are focusing on the .van-popup and related classes.
+ */
+
+/* ========================================================================= */
+/* Vant-related styles (assuming these are from your Vant setup)           */
+/* ========================================================================= */
+
+.van-popup {
+  position: fixed;
+  /* Ensure it covers the whole screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;   /* Take full viewport width */
+  height: 100vh;  /* Take full viewport height */
+  max-width: none; /* Override any max-width property */
+  max-height: none; /* Override any max-height property */
+
+  /* Ensure the popup itself does not scroll */
+  overflow: hidden;
+
+  /* Use flexbox to perfectly center the content (the spinner) */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+
+  background-color: rgba(0, 0, 0, 0.7); /* Example: Semi-transparent dark background */
+  z-index: 2003; /* Keep your existing z-index */
+  /* Remove any transforms from the .van-popup--center if you're making it full screen */
+  transform: none !important; /* Important to override Vant's default centering transform */
 }
+
+/* If .van-popup--center adds specific styles, you might need to override them.
+   For a full-screen loader, we want to remove any relative positioning or transforms
+   that would prevent it from occupying the entire screen. */
+.van-popup--center {
+  /* These properties are now handled by the .van-popup itself for full-screen centering */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: none !important; /* This is crucial to prevent conflicting transforms */
+}
+
+/* Ensure the toast's inner content (the loading spinner) is also centered and not causing issues */
+.van-toast.van-toast--middle.van-toast--loading {
+    /* Set display flex here too for direct centering of its children if needed,
+       though the .van-popup flex properties should handle it. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional: Set background to transparent or a subtle color if you want.
+       The main background will be from .van-popup */
+    background-color: transparent;
+}
+
+/* Ensure the spinner itself is properly sized and contained */
+.van-loading {
+  /* Add any specific styling for the loading container itself if needed */
+}
+
+.van-loading__spinner {
+  /* Adjust spinner specific styles if necessary, but typically these are fine */
+}
+
+/* The blade styles are assumed to be handled by Vant's internal CSS */
+/* You had this in your original CSS, but your React component uses van-loading__line */
+/*
+.spinner .spinner-blade { ... }
+.spinner .spinner-blade:nth-child(1) { ... }
+...
+*/
+
+/* If you are using the custom spinner blades, make sure their parent is also correctly sized */
+/* For your Vant setup, these would be the .van-loading__line elements */
+/* (The original custom spinner blades are not used in your React component) */
+
+/* Keyframe animations are fine as they are */
+/*
+@-webkit-keyframes spinner-fade9234 { ... }
+@-moz-keyframes spinner-fade9234 { ... }
+@-ms-keyframes spinner-fade9234 { ... }
+@keyframes spinner-fade9234 { ... }
+*/

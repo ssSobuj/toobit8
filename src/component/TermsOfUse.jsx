@@ -26,7 +26,7 @@ const TermsOfUse = () => {
 
                 <h3><strong>1. Introduction</strong></h3>
                 <p>
-                  Measure for Measure Ltd. (<strong>“Measure Quant”</strong>, “we,” “us,” or “our”)
+                  Tobbit for Tobbit Ltd. (<strong>“Tobbit”</strong>, “we,” “us,” or “our”)
                   is committed to safeguarding your privacy and personal information.
                   This Privacy Policy describes in detail the types of data we collect, how we use it,
                   how we protect it, and your rights regarding your data when you use our websites,
@@ -78,7 +78,7 @@ const TermsOfUse = () => {
                   <li>With service providers (payment processors, hosting partners, analytics providers) who help us operate efficiently.</li>
                   <li>With financial institutions or payment networks to process authorized transactions.</li>
                   <li>With law enforcement or government authorities where legally required.</li>
-                  <li>With affiliates or trusted partners within Measure for Measure Ltd. group structures.</li>
+                  <li>With affiliates or trusted partners within Tobbit for Tobbit Ltd. group structures.</li>
                   <li>In the case of a business restructuring, merger, or acquisition.</li>
                 </ul>
 
@@ -131,7 +131,7 @@ const TermsOfUse = () => {
                 </p>
                 <p>
                   Email: <a href="mailto:samadkhan485p@gmail.com">samadkhan485p@gmail.com</a><br />
-                  <strong>Measure for Measure LTD</strong>
+                  <strong>Tobbit for Tobbit LTD</strong>
                 </p>
               </div>
             </div>
