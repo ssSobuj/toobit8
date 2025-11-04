@@ -20,45 +20,50 @@ const Navbar = () => {
   }, []);
 
   return (
-    <footer data-v-f5703ed9
+    <footer
+      data-v-f5703ed9
       className="tab-bar-wrap tab-bar-wrap-30 fixed bottom-0 z-2"
       style={{ "--e0f11642": "20%" }}
     >
-
       <div className="tab-bar">
         <NavLink to="/home" className="tab-item">
           <div data-v-28e06567="" className="tab-item-inner">
-            <div className="tab-item-icon i-mingcute:home-6-fill c-$text-gray">
+            <div className="tab-item-icon i-mingcute:home-6-fill c-$text-gray"></div>
+            <div data-v-28e06567="" className="tab-item-label">
+              {t("home")}
             </div>
-            <div data-v-28e06567="" className="tab-item-label">{t("home")}</div>
           </div>
         </NavLink>
         <NavLink to="/works" className="tab-item">
           <div data-v-28e06567="" className="tab-item-inner">
-            <div className="tab-item-icon i-mingcute:task-fill c-$text-gray">
+            <div className="tab-item-icon i-mingcute:task-fill c-$text-gray"></div>
+            <div data-v-28e06567="" className="tab-item-label">
+              {t("Income")}
             </div>
-            <div data-v-28e06567="" className="tab-item-label">{t("Income")}</div>
           </div>
         </NavLink>
-        <NavLink to="/invest/basic-invest" className="tab-item">
+        <NavLink to="/invitation-rewards" className="tab-item">
           <div data-v-28e06567="" className="tab-item-inner">
-            <div className="tab-item-icon i-material-symbols:group-work c-$text-gray">
+            <div className="tab-item-icon i-material-symbols:group-work c-$text-gray"></div>
+            <div data-v-28e06567="" className="tab-item-label">
+              {t("invest")}
             </div>
-            <div data-v-28e06567="" className="tab-item-label">{t("invest")}</div>
           </div>
         </NavLink>
         <NavLink to="/share" className="tab-item">
           <div data-v-28e06567="" className="tab-item-inner">
-            <div className="tab-item-icon i-icon-park-solid:vip-one c-$text-gray">
+            <div className="tab-item-icon i-icon-park-solid:vip-one c-$text-gray"></div>
+            <div data-v-28e06567="" className="tab-item-label">
+              {t("share_friends")}
             </div>
-            <div data-v-28e06567="" className="tab-item-label">{t("share_friends")}</div>
           </div>
         </NavLink>
         <NavLink to="/me" className="tab-item">
           <div data-v-28e06567="" className="tab-item-inner">
-            <div className="tab-item-icon i-ic:baseline-account-balance c-$text-gray">
+            <div className="tab-item-icon i-ic:baseline-account-balance c-$text-gray"></div>
+            <div data-v-28e06567="" className="tab-item-label">
+              {t("mine")}
             </div>
-            <div data-v-28e06567="" className="tab-item-label">{t("mine")}</div>
           </div>
         </NavLink>
       </div>

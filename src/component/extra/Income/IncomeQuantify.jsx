@@ -88,29 +88,38 @@ const IncomeQuantify = memo(function IncomeQuantify({
   };
 
   return (
-    <div data-v-ca6100e8="">
+    <div data-v-ca6100e8="" style={{ color: "#fff" }}>
       {/* transaction record link */}
       <div className="flex justify-center mt-10px">
         <Link
           to="/quantify-records"
-          className="px-25px py-7px rounded-22px mx-auto cursor-pointer inline-flex items-center justify-center bg-$bg-card backdrop-filter backdrop-blur-15px"
+          className="px-25px py-7px rounded-22px mx-auto cursor-pointer inline-flex items-center justify-center"
+          style={{
+            background: "rgba(1,50,168,0.18)",
+            backdropFilter: "blur(15px)",
+          }}
         >
-          <span className="text-$primary text-14px">
-            {t('transaction_record')}&gt;&gt;
+          <span style={{ color: "#fff", fontSize: 14 }}>
+            {t("transaction_record")} &gt;&gt;
           </span>
-
-          <span className="font-bold text-$primary ml-10px mr-4px">
+          <span className="font-bold ml-10px mr-4px" style={{ color: "#fff" }}>
             {badgeCount}
           </span>
-          <span className="font-bold"> /{hasCommission ? 1 : 0}</span>
+          <span className="font-bold" style={{ color: "#fff" }}>
+            {" "}
+            /{hasCommission ? 1 : 0}
+          </span>
         </Link>
       </div>
 
       {/* countdown (only when there is a commission) */}
       {hasCommission && (
-        <div className="text-$text-gray relative my-8px text-12px text-center">
+        <div
+          className="relative my-8px text-12px text-center"
+          style={{ color: "#fff" }}
+        >
           {t("quantify_reset_time")}{" "}
-          <span className="text-white">{formatTime(remainingSeconds)}</span>
+          <span style={{ color: "#fff" }}>{formatTime(remainingSeconds)}</span>
         </div>
       )}
 
@@ -121,8 +130,16 @@ const IncomeQuantify = memo(function IncomeQuantify({
           className=":uno: base-main-btn flex items-center justify-center mx-auto relative text-center w-full mt-$mg"
           onClick={handleStartButton}
           aria-disabled={!canStart}
+          style={{
+            color: "#fff",
+            background:
+              "linear-gradient(120deg, rgba(1,50,168,0.18) 0%, rgba(45,225,163,0.10) 100%)",
+            borderRadius: 16,
+          }}
         >
-          <div className="base-main-btn-content">{t("start_quantify")}</div>
+          <div className="base-main-btn-content" style={{ color: "#fff" }}>
+            {t("start_quantify")}
+          </div>
         </button>
       ) : null}
 

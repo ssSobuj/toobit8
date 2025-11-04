@@ -114,7 +114,7 @@ const TransferToSmartAccount = () => {
           data-v-f5703ed9=""
           className="box-border min-h-full w-full pt-45px"
         >
-          <SingleHeader pageName={t('recharge')}></SingleHeader>
+          <SingleHeader pageName={t("recharge")}></SingleHeader>
           <div data-v-1a8f829d="" className="recharge-wrap p-$mg">
             <div
               data-v-1a8f829d=""
@@ -130,7 +130,7 @@ const TransferToSmartAccount = () => {
                   draggable="false"
                   alt="logo"
                 />
-                <div className=":uno: site-name ml-8px">TOBBIT</div>
+                <div className=":uno: site-name ml-8px">TOOBIT</div>
               </div>
               {/* logo ends */}
               <div data-v-1a8f829d className="mt-20px">

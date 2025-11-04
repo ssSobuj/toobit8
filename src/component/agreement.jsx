@@ -687,7 +687,7 @@ const Agreement = () => {
                                 are not met, we will reject the reported
                                 information and ask you to provide additional
                                 corresponding information and materials, but we
-                                will not take corresponding Tobbit including
+                                will not take corresponding Toobit including
                                 deletion or disconnection for the time being.
                                 Since the content and complexity of the reported
                                 information are different, the cycle required is

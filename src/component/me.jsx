@@ -96,24 +96,38 @@ const HomePage = () => {
   return (
     <div id="app" data-v-app="" className="a-t-30 no-1">
       <div className="van-config-provider">
-        <div data-v-f5703ed9="" className="box-border min-h-full w-full layout-tab-bar px-mg">
+        <div
+          data-v-f5703ed9=""
+          className="box-border min-h-full w-full layout-tab-bar px-mg"
+        >
           <Header />
           {/* header ends */}
-          <div data-v-fba32ec4="" data-v-f5703ed9="" className="mine-wrap">
+          <div data-v-fba32ec4="" data-v-f5703ed9="" className="mine-wrap mt-5">
             <div data-v-fba32ec4="" className="mine-wrap-content">
-              <div data-v-fba32ec4="" className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text top-info">
-                <UserInfo data={data} handleCopy={handleCopy} userLevel={userLevel} />
+              <div
+                data-v-fba32ec4=""
+                className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text top-info"
+              >
+                <UserInfo
+                  data={data}
+                  handleCopy={handleCopy}
+                  userLevel={userLevel}
+                />
                 {/* userinfo ends */}
                 <UserBalanceData data={data} />
                 <div data-v-fba32ec4 className="tools">
                   <Link to="/recharge" data-v-fba32ec4="" className="">
                     <div data-v-fba32ec4 className="item">
-                      <div data-v-fba32ec4 className="label">{t('recharge')}</div>
+                      <div data-v-fba32ec4 className="label">
+                        {t("recharge")}
+                      </div>
                     </div>
                   </Link>
                   <Link to="/withdraw" data-v-fba32ec4="" className="">
                     <div data-v-fba32ec4 className="item">
-                      <div data-v-fba32ec4 className="label">{t('withdraw')}</div>
+                      <div data-v-fba32ec4 className="label">
+                        {t("withdraw")}
+                      </div>
                     </div>
                   </Link>
                 </div>
@@ -121,24 +135,34 @@ const HomePage = () => {
               </div>
               {/* ends top-info */}
               <MineLinks handleLogout={handleLogout}></MineLinks>
-              <a data-v-fba32ec4="" className=":uno: base-main-btn flex items-center justify-center mt-20px! mt-20px!" onClick={handleConfirmLogout}><div className="base-main-btn-content">{t("sign_out")}</div></a>
+              <a
+                data-v-fba32ec4=""
+                className=":uno: base-main-btn flex items-center justify-center mt-20px! mt-20px!"
+                onClick={handleConfirmLogout}
+              >
+                <div className="base-main-btn-content">{t("sign_out")}</div>
+              </a>
             </div>
           </div>
           <Navbar></Navbar>
         </div>
       </div>
 
-
       {/* layout-tab-bar end */}
       <CustomLoader />
       <SupportLink />
       {/* copy  */}
-      
-      <div role="dialog" className="van-popup van-popup--center van-toast van-toast--middle van-toast--text" style={isCopied ? { zIndex: "2015", display: "flex" } : { display: "none" }}>
+
+      <div
+        role="dialog"
+        className="van-popup van-popup--center van-toast van-toast--middle van-toast--text"
+        style={
+          isCopied ? { zIndex: "2015", display: "flex" } : { display: "none" }
+        }
+      >
         <div className="van-toast__text">{t("copy_success")}</div>
       </div>
       {/* copy alert ends */}
-
     </div>
   );
 };

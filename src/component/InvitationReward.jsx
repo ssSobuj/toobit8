@@ -11,13 +11,13 @@ import Loader from "./extra/loader";
 
 // UPDATED milestone thresholds & rewards per client
 const MILESTONES = [
-  { threshold: 3,   reward_usdt: 5,    label: "1" },
-  { threshold: 8,   reward_usdt: 10,   label: "2" },
-  { threshold: 20,  reward_usdt: 25,   label: "3" },
-  { threshold: 48,  reward_usdt: 60,   label: "4" },
-  { threshold: 92,  reward_usdt: 135,  label: "5" },
-  { threshold: 188, reward_usdt: 290,  label: "6" },
-  { threshold: 375, reward_usdt: 500,  label: "7" },
+  { threshold: 3, reward_usdt: 5, label: "1" },
+  { threshold: 8, reward_usdt: 10, label: "2" },
+  { threshold: 20, reward_usdt: 25, label: "3" },
+  { threshold: 48, reward_usdt: 60, label: "4" },
+  { threshold: 92, reward_usdt: 135, label: "5" },
+  { threshold: 188, reward_usdt: 290, label: "6" },
+  { threshold: 375, reward_usdt: 500, label: "7" },
   { threshold: 730, reward_usdt: 1000, label: "8" },
 ];
 
@@ -64,7 +64,9 @@ const InvitationReward = () => {
           typeof data?.perInviteBonus === "number" ? data.perInviteBonus : 2
         );
         setFirstRechargeMin(
-          typeof data?.firstRechargeMin === "number" ? data.firstRechargeMin : 15
+          typeof data?.firstRechargeMin === "number"
+            ? data.firstRechargeMin
+            : 15
         );
       } catch (err) {
         setMessage("Failed to load invite rewards.");
@@ -106,7 +108,10 @@ const InvitationReward = () => {
       {isLoader && <Loader />}
 
       <div className="van-config-provider" style={{ minHeight: "100vh" }}>
-        <div data-v-f5703ed9="" className="box-border min-h-full w-full pt-45px">
+        <div
+          data-v-f5703ed9=""
+          className="box-border min-h-full w-full pt-45px"
+        >
           <SingleHeader pageName={t("activity")} />
           <div className="p-$mg">
             <div className="mt-10px">
@@ -140,7 +145,10 @@ const InvitationReward = () => {
                     <div className="mt-5px">{t("tiered_rewards_intro")}</div>
                   </div>
 
-                  <div role="separator" className="van-divider van-divider--hairline" />
+                  <div
+                    role="separator"
+                    className="van-divider van-divider--hairline"
+                  />
 
                   {/* Header row */}
                   <div className="van-row text-center">
@@ -157,7 +165,10 @@ const InvitationReward = () => {
                       <div className="font-bold">{t("receive")}</div>
                     </div>
                   </div>
-                  <div role="separator" className="van-divider van-divider--hairline" />
+                  <div
+                    role="separator"
+                    className="van-divider van-divider--hairline"
+                  />
 
                   {/* Unlimited auto row */}
                   <div className="van-row text-center h-40px flex items-center">
@@ -178,7 +189,8 @@ const InvitationReward = () => {
                   {/* Milestone rows */}
                   {rows.map((r) => {
                     const remaining = Math.max(0, r.threshold - invitedCount);
-                    const canClaim = r.status === "claimable" && remaining === 0;
+                    const canClaim =
+                      r.status === "claimable" && remaining === 0;
                     const claimed = r.status === "claimed";
                     return (
                       <div

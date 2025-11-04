@@ -60,12 +60,14 @@ const Infromation = () => {
                       <ul>
                         <p>{t("key_features_title")}</p>
                         <li>
-                          <strong>{t("feature_multi_exchange_title")} </strong> -{" "}
-                          {t("feature_multi_exchange_desc")}
+                          <strong>{t("feature_multi_exchange_title")} </strong>{" "}
+                          - {t("feature_multi_exchange_desc")}
                         </li>
                         <li>
-                          <strong>{t("feature_realtime_arbitrage_title")} </strong> –{" "}
-                          {t("feature_realtime_arbitrage_desc")}
+                          <strong>
+                            {t("feature_realtime_arbitrage_title")}{" "}
+                          </strong>{" "}
+                          – {t("feature_realtime_arbitrage_desc")}
                         </li>
                         <li>
                           <strong>{t("feature_ai_autonomous_title")} </strong>–{" "}
@@ -74,7 +76,7 @@ const Infromation = () => {
                       </ul>
                       <br />
                       <p>
-                        <strong>Tobbit</strong> {t("platform_mission")}
+                        <strong>Toobit</strong> {t("platform_mission")}
                       </p>
                       <p className="mt-3">{t("platform_future_line")}</p>
                     </div>

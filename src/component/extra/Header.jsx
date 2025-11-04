@@ -76,7 +76,11 @@ const Header = () => {
   };
 
   return (
-    <header ref={headerRef} className="nav-bar-wrap" style={{ "--47031f5d": "0" }}>
+    <header
+      ref={headerRef}
+      className="nav-bar-wrap"
+      style={{ "--47031f5d": "0" }}
+    >
       <div className="nav-bar px-1">
         <div id="navBarItem19" className="nav-bar-content h-full w-full">
           <div className="left name font-playgram">
@@ -89,14 +93,16 @@ const Header = () => {
                 style={{ minWidth: "40px", minHeight: "40px" }}
               />
             </div>
-            <span className="font-playgram text-truncate ml-1">TOBBIT</span>
+            <span className="font-playgram text-truncate ml-1">TOOBIT</span>
           </div>
 
           <div className="right">
             <div className="mr-8px flex items-center">
               {/* ONLY change here: rotate + dot are conditional based on hasUnread */}
               <div
-                className={`${hasUnread ? "rotate" : ""} base-alarm-logo-btn cursor-pointer mr-0`}
+                className={`${
+                  hasUnread ? "rotate" : ""
+                } base-alarm-logo-btn cursor-pointer mr-0`}
                 onClick={goNotice}
               >
                 <img src={noticeIcon} className="w-20px h-20px" alt="alarm" />
@@ -109,7 +115,9 @@ const Header = () => {
                 className="svg-icon 1-lang :uno: mr-3px text-16px :uno: mr-3px text-16px"
                 icon={faGlobe}
               />
-              <span>{languageLabel === "en-US" ? "English" : languageLabel}</span>
+              <span>
+                {languageLabel === "en-US" ? "English" : languageLabel}
+              </span>
             </Link>
           </div>
         </div>

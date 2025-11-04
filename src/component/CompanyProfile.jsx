@@ -18,24 +18,25 @@ const CompanyProfile = () => {
             >
               <div className="rich-text text-base">
                 <p>
-                  <strong>MEASURE FOR MEASURE LTD</strong> was founded in London,
-                  UK in 2004 and is committed to becoming a leading enterprise
-                  in the field of blockchain-based intelligent trading.
+                  <strong>MEASURE FOR MEASURE LTD</strong> was founded in
+                  London, UK in 2004 and is committed to becoming a leading
+                  enterprise in the field of blockchain-based intelligent
+                  trading.
                 </p>
                 <br />
                 <p>
-                  <strong>TOBBIT</strong> is an advanced quantitative
-                  trading system powered by artificial intelligence technology.
-                  Its core capability lies in the automatic execution of trading
+                  <strong>TOOBIT</strong> is an advanced quantitative trading
+                  system powered by artificial intelligence technology. Its core
+                  capability lies in the automatic execution of trading
                   strategies to maximize investment returns while minimizing
-                  risk. Specifically, TOBBIT transforms investment
-                  decisions into executable computer algorithms, enabling
-                  transparent, efficient, and rapid trading operations that
-                  adapt seamlessly to real-time market fluctuations.
+                  risk. Specifically, TOOBIT transforms investment decisions
+                  into executable computer algorithms, enabling transparent,
+                  efficient, and rapid trading operations that adapt seamlessly
+                  to real-time market fluctuations.
                 </p>
                 <br />
                 <p>
-                  TOBBIT’s trading strategies are grounded in modern
+                  TOOBIT’s trading strategies are grounded in modern
                   mathematics, statistics, machine learning, and continuous
                   analysis of market trends and digital asset prices to
                   determine the most effective trading actions. Through complex
@@ -52,8 +53,8 @@ const CompanyProfile = () => {
                 </p>
                 <br />
                 <p>
-                  In essence, TOBBIT is a next-generation quantitative
-                  trading system that merges artificial intelligence with modern
+                  In essence, TOOBIT is a next-generation quantitative trading
+                  system that merges artificial intelligence with modern
                   financial theory to automatically implement strategies aimed
                   at maximizing profit and minimizing risk.
                 </p>
@@ -73,9 +74,7 @@ const CompanyProfile = () => {
                 </p>
               </div>
 
-              <div style={{ textAlign: "center", marginTop: 20 }}>
-  
-              </div>
+              <div style={{ textAlign: "center", marginTop: 20 }}></div>
             </div>
           </div>
         </div>

@@ -11,8 +11,9 @@ import Header from "./extra/Header";
 
 import "../assets/css/invest.css";
 import InvestPackageList from "./extra/Invest/InvestPackageList";
+import StreakCard from "./StreakCard";
 
-const Invest = () => {
+const DailyCart = () => {
   const navigate = useNavigate();
   const inviteReward = () => {
     navigate("/invitation-rewards");
@@ -118,7 +119,64 @@ const Invest = () => {
     // We want the box labels to retranslate when language changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
+  const [activeTab, setActiveTab] = useState("direct");
 
+  const rewardsData = [
+    {
+      task: "Complete the task with 3 active members at level 1!",
+      usdt: 4,
+      current: 0,
+      total: 3,
+    },
+    {
+      task: "Complete the task with 7 active members at level 1!",
+      usdt: 6,
+      current: 0,
+      total: 7,
+    },
+    {
+      task: "Complete the task with 15 active members at level 1!",
+      usdt: 15,
+      current: 0,
+      total: 15,
+    },
+    {
+      task: "Complete the task with 32 active members at level 1!",
+      usdt: 30,
+      current: 0,
+      total: 32,
+    },
+    {
+      task: "Complete the task with 65 active members at level 1!",
+      usdt: 70,
+      current: 0,
+      total: 65,
+    },
+    {
+      task: "Complete the task with 120 active members at level 1!",
+      usdt: 100,
+      current: 0,
+      total: 120,
+    },
+    {
+      task: "Complete the task with 250 active members at level 1!",
+      usdt: 200,
+      current: 0,
+      total: 250,
+    },
+  ];
+
+  const missionsData = [
+    { task: "Invite 5 friends to register!", usdt: 5, current: 2, total: 5 },
+    {
+      task: "Get 10 total deposits from your team!",
+      usdt: 10,
+      current: 4,
+      total: 10,
+    },
+  ];
+
+  const currentData = activeTab === "direct" ? rewardsData : missionsData;
   return (
     <div id="app" data-v-app="" className="a-t-30 no-1">
       <div className="van-config-provider" style={{ minHeight: "100vh" }}>
@@ -128,99 +186,14 @@ const Invest = () => {
         >
           <Header />
           {/* header ends */}
-          <div data-v-ede7987f="" data-v-f5703ed9="" className="invest-wrap">
-            {/* invest tabs starts */}
-            <div
-              data-v-ede7987f=""
-              className="top-wrap z-2 w-full flex flex-col rounded-b-xl space-y-3"
-            >
-              <div
-                data-v-ede7987f=""
-                className="mr-24 w-full flex items-center justify-between"
-              >
-                <div
-                  data-v-ede7987f=""
-                  className=":uno: base-user-tab flex items-center justify-center w-full"
-                  style={{ "--84f29e72": "2" }}
-                >
-                  <div className=":uno: tab-item h-full flex cursor-pointer items-center justify-center active">
-                    <div className="text-center">{t("smart_investment")}</div>
-                  </div>
-                  <Link
-                    to="/invest/records"
-                    className=":uno: tab-item h-full flex cursor-pointer items-center justify-center"
-                  >
-                    <div className="text-center">{t("invest_record")}</div>
-                  </Link>
-                </div>
-              </div>
+          <div
+            data-v-ede7987f=""
+            data-v-f5703ed9=""
+            className="invest-wrap mt-4"
+          >
+            <div className="invest-wrap ">
+              <StreakCard />
             </div>
-            {/* invest tabs ends */}
-            <div data-v-ede7987f="" className="mt-10px invset-level-wrap">
-              {data?.products?.map((product, index) => (
-                <div
-                  data-v-ede7987f=""
-                  className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text pt-8px!"
-                  key={index}
-                >
-                  <Link to={`/invest-product/${product.slug}`}>
-                    <h3
-                      data-v-ede7987f=""
-                      className="base-section-title mb-10px mb-10px"
-                    >
-                      {product.title}
-                    </h3>
-                    <div data-v-ede7987f="" className="level-info">
-                      <div data-v-ede7987f="" className="left">
-                        <img
-                          data-v-ede7987f=""
-                          src={`${baseUrl}${product.image}`}
-                          className="vip-img"
-                          alt={product.title}
-                        />
-                      </div>
-                      <div data-v-ede7987f="" className="right">
-                        <div data-v-ede7987f="" className="item">
-                          <div data-v-ede7987f="" className="title">
-                            <em data-v-ede7987f=""></em>
-                            {t("price")}
-                          </div>
-                          <div data-v-ede7987f="" className="value">
-                            {product.starting_amount} USDT
-                          </div>
-                        </div>
-                        <div data-v-ede7987f="" className="item">
-                          <div data-v-ede7987f="" className="title">
-                            <em data-v-ede7987f=""></em>
-                            {t("daily_rate")}
-                          </div>
-                          <div data-v-ede7987f="" className="value c-green">
-                            {product.daily_interest}%{" "}
-                          </div>
-                        </div>
-                        <div data-v-ede7987f="" className="item">
-                          <div data-v-ede7987f="" className="title">
-                            <em data-v-ede7987f=""></em>
-                            {t("cycle")}
-                          </div>
-                          <div data-v-ede7987f="" className="value">
-                            {product.cycle} {t("day")}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            {/* (Optional) Pricing guidance boxes — uncomment if you want to show them
-            <div className="mt-16px space-y-10px">
-              {priceBoxes.map((p, i) => (
-                <PriceBox key={i} {...p} />
-              ))}
-            </div>
-            */}
           </div>
           <Navbar></Navbar>
         </div>
@@ -345,4 +318,4 @@ const CrownIcon = () => {
   );
 };
 
-export default Invest;
+export default DailyCart;

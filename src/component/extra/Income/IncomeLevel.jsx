@@ -87,25 +87,59 @@ const IncomeLevel = ({ handleUnlockLevel, data }) => {
           data-v-ca6100e8=""
           className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text vip-card"
           key={index}
+          style={{
+            background:
+              "linear-gradient(120deg, rgba(1,50,168,0.18) 0%, rgba(45,225,163,0.10) 100%)",
+            color: "#fff",
+            borderRadius: 24,
+            boxShadow: "0 8px 32px 0 rgba(1,50,168,0.10)",
+            border: "1.5px solid rgba(90,108,255,0.10)",
+            marginBottom: 24,
+          }}
         >
           <h3
             data-v-ca6100e8=""
             className="base-section-title flex justify-between"
+            style={{ color: "#fff" }}
           >
             <div data-v-ca6100e8="" className="flex items-center">
-              <div data-v-ca6100e8="" className="vip-name font-you">
+              <div
+                data-v-ca6100e8=""
+                className="vip-name font-you"
+                style={{ color: "#fff" }}
+              >
                 {level.lavelName}
               </div>
             </div>
 
             {currentVip === index + 1 ? (
-              <div data-v-ca6100e8="" className="unlock-btn">
+              <div
+                data-v-ca6100e8=""
+                className="unlock-btn"
+                style={{
+                  color: "#fff",
+                  background: "rgba(90,108,255,0.10)",
+                  borderRadius: 12,
+                  padding: "0.25rem 1rem",
+                  fontWeight: 600,
+                  fontSize: 16,
+                }}
+              >
                 <span>{t("current_vip")}</span>
               </div>
             ) : (
               <div
                 data-v-ca6100e8=""
                 className="unlock-btn"
+                style={{
+                  color: "#fff",
+                  background: "rgba(90,108,255,0.10)",
+                  borderRadius: 12,
+                  padding: "0.25rem 1rem",
+                  fontWeight: 600,
+                  fontSize: 16,
+                  cursor: "pointer",
+                }}
                 onClick={() => handleUnlockLevel(level.minUnclock)}
               >
                 <span>{t("click_to_unlock")}</span>
@@ -115,51 +149,62 @@ const IncomeLevel = ({ handleUnlockLevel, data }) => {
 
           <div
             data-v-ca6100e8=""
-            className="grid grid-cols-1 gap-4px mt-10px bg-$bg-card2 py-5px rd!"
+            className="grid grid-cols-1 gap-4px mt-10px py-5px rd!"
+            style={{
+              color: "#fff",
+              background: "rgba(1,50,168,0.10)",
+              borderRadius: 16,
+            }}
           >
             <div data-v-ca6100e8="" className="vip-info-item">
-              <div data-v-ca6100e8="" className="text-$text-gray text-12px">
+              <div data-v-ca6100e8="" style={{ color: "#fff", fontSize: 12 }}>
                 {t("quantification_times_per_day")}
               </div>
-              <div data-v-ca6100e8="" className="font-bold text-14px">
+              <div
+                data-v-ca6100e8=""
+                style={{ fontWeight: "bold", fontSize: 14, color: "#fff" }}
+              >
                 {level.quantification}
               </div>
             </div>
 
             <div data-v-ca6100e8="" className="vip-info-item">
-              <div data-v-ca6100e8="" className="text-$text-gray text-12px">
+              <div data-v-ca6100e8="" style={{ color: "#fff", fontSize: 12 }}>
                 {t("profit_ratio")}
               </div>
-              <div data-v-ca6100e8="" className="font-bold text-14px">
+              <div
+                data-v-ca6100e8=""
+                style={{ fontWeight: "bold", fontSize: 14, color: "#fff" }}
+              >
                 {level.profitRation}
               </div>
             </div>
 
             <div data-v-ca6100e8="" className="vip-info-item">
-              <div data-v-ca6100e8="" className="text-$text-gray text-12px">
+              <div data-v-ca6100e8="" style={{ color: "#fff", fontSize: 12 }}>
                 {t("minimum_unlock_amount")}
               </div>
-              <div data-v-ca6100e8="" className="font-bold text-14px">
-                {"≥"}{level.minUnclock} USDT
+              <div
+                data-v-ca6100e8=""
+                style={{ fontWeight: "bold", fontSize: 14, color: "#fff" }}
+              >
+                {"≥"}
+                {level.minUnclock} USDT
               </div>
             </div>
 
             <div data-v-ca6100e8="" className="vip-info-item">
-              <div data-v-ca6100e8="" className="text-$text-gray text-12px">
+              <div data-v-ca6100e8="" style={{ color: "#fff", fontSize: 12 }}>
                 {t("quantifiable_number_of_days")}
               </div>
-              <div data-v-ca6100e8="" className="font-bold text-14px">
+              <div
+                data-v-ca6100e8=""
+                style={{ fontWeight: "bold", fontSize: 14, color: "#fff" }}
+              >
                 {level.numberOfDays}
               </div>
             </div>
           </div>
-
-          {/* <div
-            data-v-ca6100e8=""
-            className="text-sm text-left font-bold mt-8px"
-          >
-            JASMY QUANT
-          </div> */}
         </div>
       ))}
     </div>

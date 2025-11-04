@@ -71,6 +71,8 @@ import QuantifyRecords from "./component/QuantifyRecords";
 import EmailVerify from "./component/auth/EmailVerify";
 import NoticeWithdraw from "./component/NoticeWithdraw";
 import NoticeDeposit from "./component/NoticeDeposit";
+import InvitationRewardNew from "./component/InvitationRewardNew.jsx";
+import DailyCart from "./component/DailyCart.jsx";
 
 function App() {
   axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
@@ -170,7 +172,11 @@ function App() {
                 </PrivateRoute>
               }
             />
-            <Route path="/invitation-rewards" element={<InvitationReward />} />
+            <Route
+              path="/invitation-rewards"
+              element={<InvitationRewardNew />}
+            />
+            <Route path="/daily-chart" element={<DailyCart />} />
             <Route
               path="/registration-rewards"
               element={<RegistrationRewards />}

@@ -77,6 +77,28 @@ const home = () => {
             <HomeAssert data={data}></HomeAssert>
             <HomeLinks></HomeLinks>
             {/* <HomeActivity></HomeActivity> */}
+            <div className="py-4" style={{ width: "100%" }}>
+              <a
+                style={{
+                  width: "100%",
+                  display: "block", // <--- Add this line
+                  borderRadius: "0.5rem",
+                  backgroundColor: "#103795",
+                  backdropFilter: "blur(4px)",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  padding: "0.5rem 0.75rem",
+                  textAlign: "center",
+                  fontSize: "0.875rem",
+                  color: "white",
+                  outline: "none",
+                  boxShadow: "none",
+                  textDecoration: "none", // Added to remove default underline for anchor tags
+                }}
+                href="/#/daily-chart" // Add an href if it's meant to be a link
+              >
+                View Daily Check-In
+              </a>
+            </div>
             <HomeQuotes></HomeQuotes>
             <HomeWithdrawal></HomeWithdrawal>
             <GlobalPartner></GlobalPartner>
