@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useTranslation } from "react-i18next";
-import logo from "../../assets/images/logo2.png";
+import logo from "../../assets/images/bit-coin.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -59,10 +59,9 @@ function AuthTopPart({ userName }) {
             src={logo}
             draggable="false"
             alt="logo"
-            style={{ maxWidth: "160px" }}
+            style={{ maxWidth: "260px" }}
           />
         </div>
-       
       </div>
       <div className="top-tools">
         <div></div>
@@ -71,7 +70,13 @@ function AuthTopPart({ userName }) {
             className="svg-icon 1-lang :uno: mr-3px text-16px :uno: mr-3px text-16px"
             icon={faGlobe}
           />
-          <span>{languageLabel === "en-US" || languageLabel === "en-GB" || languageLabel === "en-UK" ? "English" : languageLabel}</span>
+          <span>
+            {languageLabel === "en-US" ||
+            languageLabel === "en-GB" ||
+            languageLabel === "en-UK"
+              ? "English"
+              : languageLabel}
+          </span>
         </Link>
       </div>
     </header>

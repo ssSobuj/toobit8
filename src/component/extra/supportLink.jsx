@@ -5,6 +5,7 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import { FaTelegram } from "react-icons/fa";
 
 const SupportLink = () => {
   const { t } = useTranslation();
@@ -128,7 +129,7 @@ const SupportLink = () => {
     left: 0,
     right: 0,
     height: "50%",
-    backgroundColor: "#fff",
+    background: "linear-gradient(135deg, #005cff, #826E00, #002668)",
     transform: isOpen ? "translateY(0)" : "translateY(100%)",
     transition: "transform 0.3s ease-out",
     boxShadow: "0 -2px 10px rgba(0,0,0,0.1)",
@@ -140,7 +141,7 @@ const SupportLink = () => {
   };
 
   const headerStyle = {
-    color: "#1d222a",
+    color: "#fff",
     fontSize: "20px",
     fontWeight: "bold",
     marginBottom: "10px",
@@ -148,7 +149,7 @@ const SupportLink = () => {
   };
 
   const descriptionStyle = {
-    color: "#848e9a",
+    color: "#fff",
     fontSize: "14px",
     marginBottom: "20px",
     textAlign: "center",
@@ -157,8 +158,8 @@ const SupportLink = () => {
   const telegramButtonStyle = {
     display: "flex",
     alignItems: "center",
-    backgroundColor: "#f5f7fa",
-    color: "#1d222a",
+    backgroundColor: "rgba(56, 94, 189, 1)",
+    color: "#fff",
     padding: "5px",
     paddingRight: "10px",
     borderRadius: "10px",
@@ -196,16 +197,13 @@ const SupportLink = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={telegramIcon}
-            alt="Telegram"
-            style={{ width: "60px", height: "60px" }}
-          />
+          <FaTelegram size={60} />
+
           {t("customer_support")}
           <span style={{ fontSize: "15px", marginLeft: "auto" }}>
             <FontAwesomeIcon
               icon={faChevronRight}
-              style={{ fontSize: "12px", color: "#848e9a" }}
+              style={{ fontSize: "12px", color: "#fff" }}
             />
           </span>
         </a>
@@ -216,11 +214,7 @@ const SupportLink = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={telegramIcon}
-            alt="Telegram"
-            style={{ width: "60px", height: "60px" }}
-          />
+          <FaTelegram size={60} />
           {t("community_group")}
           <span style={{ fontSize: "15px", marginLeft: "auto" }}>
             <FontAwesomeIcon
