@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useTranslation } from "react-i18next";
-import logo from "../../assets/images/bit-coin.png";
+import logo from "../../assets/images/robot3.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -59,7 +59,7 @@ function AuthTopPart({ userName }) {
             src={logo}
             draggable="false"
             alt="logo"
-            style={{ maxWidth: "260px" }}
+            style={{ maxWidth: "180px" }}
           />
         </div>
       </div>

@@ -35191,6 +35191,7 @@ html {
 
 .a-t-30 .container-login.c-1 .login-content {
   background: #0758f391;
+  z-index:99;
 }
 
 .a-t-30 .container-login.c-2 {

@@ -5,7 +5,7 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
-import { FaTelegram } from "react-icons/fa";
+import { FaTelegram, FaTelegramPlane } from "react-icons/fa";
 
 const SupportLink = () => {
   const { t } = useTranslation();
@@ -129,7 +129,7 @@ const SupportLink = () => {
     left: 0,
     right: 0,
     height: "50%",
-    background: "linear-gradient(135deg, #005cff, #826E00, #002668)",
+    background: "linear-gradient(135deg, #005cff, #50450aff, #002668)",
     transform: isOpen ? "translateY(0)" : "translateY(100%)",
     transition: "transform 0.3s ease-out",
     boxShadow: "0 -2px 10px rgba(0,0,0,0.1)",
@@ -158,16 +158,16 @@ const SupportLink = () => {
   const telegramButtonStyle = {
     display: "flex",
     alignItems: "center",
-    backgroundColor: "rgba(56, 94, 189, 1)",
+    background: "#2c5aa3ff",
     color: "#fff",
-    padding: "5px",
+    padding: "12px",
     paddingRight: "10px",
     borderRadius: "10px",
     textDecoration: "none",
     marginTop: "10px",
     fontSize: "16px",
     fontWeight: "600",
-    gap: "10px",
+    gap: "20px",
   };
 
   return (
@@ -197,7 +197,7 @@ const SupportLink = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTelegram size={60} />
+          <FaTelegramPlane size={40} />
 
           {t("customer_support")}
           <span style={{ fontSize: "15px", marginLeft: "auto" }}>
@@ -214,12 +214,12 @@ const SupportLink = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTelegram size={60} />
+          <FaTelegramPlane size={40} />
           {t("community_group")}
           <span style={{ fontSize: "15px", marginLeft: "auto" }}>
             <FontAwesomeIcon
               icon={faChevronRight}
-              style={{ fontSize: "12px", color: "#848e9a" }}
+              style={{ fontSize: "12px", color: "#fff" }}
             />
           </span>
         </a>
