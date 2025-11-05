@@ -77,15 +77,14 @@ const home = () => {
             <HomeAssert data={data}></HomeAssert>
             <HomeLinks></HomeLinks>
             {/* <HomeActivity></HomeActivity> */}
-            <div className="py-4" style={{ width: "100%" }}>
+            <div className="pb-2 pt-4" style={{ width: "100%" }}>
               <a
                 style={{
                   width: "100%",
                   display: "block", // <--- Add this line
                   borderRadius: "0.5rem",
-                  backgroundColor: "#103795",
+                  backgroundColor: "#1b4094ff",
                   backdropFilter: "blur(4px)",
-                  border: "1px solid rgba(255, 255, 255, 0.3)",
                   padding: "0.5rem 0.75rem",
                   textAlign: "center",
                   fontSize: "0.875rem",

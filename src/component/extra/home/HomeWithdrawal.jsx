@@ -5,8 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 // Function to generate a random username and TRX amount
 const generateFakeData = () => {
   const prefix = "abcdefghijklmnopqrstuvwxyz";
-  const randomUsername = `${prefix[Math.floor(Math.random() * prefix.length)]
-    }*****${prefix[Math.floor(Math.random() * prefix.length)]}`;
+  const randomUsername = `${
+    prefix[Math.floor(Math.random() * prefix.length)]
+  }*****${prefix[Math.floor(Math.random() * prefix.length)]}`;
 
   // Conversion rate: 1 TRX = 0.07 USDT
   const trxAmount = Math.random() * 10000;
@@ -41,9 +42,17 @@ const HomeWithdrawal = () => {
   }, []);
 
   return (
-    <div data-v-1b3f4761="" className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text membership-list">
-      <div data-v-1b3f4761="" className="base-section-title">{t("profit_withdrawal")}</div>
-      <div data-v-1b3f4761="" className="swiper swiper-initialized swiper-vertical membership-content max-h-[500px]">
+    <div
+      data-v-1b3f4761=""
+      className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text membership-list"
+    >
+      <div data-v-1b3f4761="" className="base-section-title">
+        {t("profit_withdrawal")}
+      </div>
+      <div
+        data-v-1b3f4761=""
+        className="swiper swiper-initialized swiper-vertical membership-content max-h-[500px]"
+      >
         <div data-v-1b3f4761="" className="swiper-wrapper">
           {dataList.map((item, index) => (
             <AnimatePresence key={`${index}-${item.name}`}>
@@ -63,16 +72,16 @@ const HomeWithdrawal = () => {
                     <div data-v-1b3f4761="" className="w-full text-truncate">
                       {item.name}
                     </div>
-                    <div data-v-1b3f4761="" className="font-anton w-full text-right">
+                    <div
+                      data-v-1b3f4761=""
+                      className="font-anton w-full text-right"
+                    >
                       +{item.value}
                     </div>
                   </div>
                 </motion.div>
               ) : (
-                <div
-                  data-v-1b3f4761=""
-                  className="swiper-slide"
-                >
+                <div data-v-1b3f4761="" className="swiper-slide">
                   <div
                     data-v-1b3f4761=""
                     className="flex flex-nowrap h-40px w-full justify-between border-b border-solid border-$border-color items-center"
@@ -80,7 +89,10 @@ const HomeWithdrawal = () => {
                     <div data-v-1b3f4761="" className="w-full text-truncate">
                       {item.name}
                     </div>
-                    <div data-v-1b3f4761="" className="font-anton w-full text-right">
+                    <div
+                      data-v-1b3f4761=""
+                      className="font-anton w-full text-right text-white fw-medium"
+                    >
                       +{item.value}
                     </div>
                   </div>
@@ -88,10 +100,8 @@ const HomeWithdrawal = () => {
               )}
             </AnimatePresence>
           ))}
-          
         </div>
       </div>
-     
     </div>
   );
 };

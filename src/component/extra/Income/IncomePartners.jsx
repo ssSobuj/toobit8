@@ -1,180 +1,74 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const IncomePartners = () => {
+  const partners = [
+    {
+      name: "Binance",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/270.png",
+    },
+    {
+      name: "Kraken",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/24.png",
+    },
+    {
+      name: "KuCoin",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/311.png",
+    },
+    {
+      name: "Coinbase Exchange",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/89.png",
+    },
+    {
+      name: "OKX",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/294.png",
+    },
+    {
+      name: "Bitstamp",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/70.png",
+    },
+    {
+      name: "Bitfinex",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/37.png",
+    },
+    {
+      name: "Bybit",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/521.png",
+    },
+    {
+      name: "Gate.io",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/302.png",
+    },
+    {
+      name: "Bitget",
+      src: "https://s2.coinmarketcap.com/static/img/exchanges/64x64/513.png",
+    },
+  ];
+
   return (
-    <div style={{ opacity: 1, transform: "none" }} bis_skin_checked={1}>
-      <div className="mt-4" bis_skin_checked={1}>
-        <div
-          className="bg-purple-600/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl shadow-lg p-4 sm:p-6"
-          bis_skin_checked={1}
-        >
-          <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6 text-center">
+    <div style={{ opacity: 1, transform: "none" }}>
+      <div className="mt-4">
+        <div className="bg-purple-600/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl shadow-lg p-4 sm:p-6">
+          <h3 className="text-lg sm:text-xl fw-bold text-white mb-4 sm:mb-6 text-center">
             Core Cooperative Financial Institutions
           </h3>
-          <div
-            className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4"
-            bis_skin_checked={1}
-          >
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="Binance"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/270.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                Binance
+
+          <div className="row g-3">
+            {partners.map((partner, index) => (
+              <div key={index} className="col-6 col-md-4 col-lg-3">
+                <div className="d-flex align-items-center justify-content-center gap-2 p-3 bg-black/20 border border-purple-500/30 rounded-xl">
+                  <img
+                    alt={partner.name}
+                    src={partner.src}
+                    className="rounded object-cover"
+                    style={{ width: "40px", height: "40px" }}
+                  />
+                  <div className="text-white fw-medium text-center text-truncate small">
+                    {partner.name}
+                  </div>
+                </div>
               </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="Kraken"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/24.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                Kraken
-              </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="KuCoin"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/311.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                KuCoin
-              </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="Coinbase Exchange"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/89.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                Coinbase Exchange
-              </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="OKX"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/294.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                OKX
-              </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="Bitstamp"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/70.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                Bitstamp
-              </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="Bitfinex"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/37.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                Bitfinex
-              </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="Bybit"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/521.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                Bybit
-              </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="Gate.io"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/302.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                Gate.io
-              </div>
-            </div>
-            <div
-              className="flex items-center justify-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-black/20 border border-purple-500/30 rounded-xl transition-colors"
-              bis_skin_checked={1}
-            >
-              <img
-                alt="Bitget"
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
-                src="https://s2.coinmarketcap.com/static/img/exchanges/64x64/513.png"
-              />
-              <div
-                className="text-white font-medium text-xs sm:text-sm text-center truncate"
-                bis_skin_checked={1}
-              >
-                Bitget
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

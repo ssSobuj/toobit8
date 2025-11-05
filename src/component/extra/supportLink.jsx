@@ -188,9 +188,7 @@ const SupportLink = () => {
         aria-label={t("online_service")}
       >
         <h2 style={headerStyle}>{t("online_service")}</h2>
-        <p style={descriptionStyle}>
-          {t("choose_support_method")}
-        </p>
+        <p style={descriptionStyle}>{t("choose_support_method")}</p>
 
         <a
           href={data?.support_url}

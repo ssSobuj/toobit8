@@ -11,32 +11,37 @@ import { useTranslation } from "react-i18next";
 const GlobalPartner = () => {
   const { t } = useTranslation();
   return (
-    <div data-v-1b3f4761="" className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text global-partner mt-16px">
-      <div data-v-1b3f4761="" className="base-section-title">{t("global_partners")}</div>
+    <div
+      data-v-1b3f4761=""
+      className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text global-partner mt-16px"
+    >
+      <div data-v-1b3f4761="" className="base-section-title">
+        {t("global_partners")}
+      </div>
       <div className="grid-wrap">
         <div className="grid-item">
           <img src={wazirX} alt="" />
         </div>
         <div className="grid-item">
-        <img src={coindcx} alt="" />
+          <img src={coindcx} alt="" />
         </div>
         <div className="grid-item">
-        <img src={bitmain} alt="" />
+          <img src={bitmain} alt="" />
         </div>
         <div className="grid-item">
-        <img src={tron} alt="" />
+          <img src={tron} alt="" />
         </div>
         <div className="grid-item">
-        <img src={binance} alt="" />
+          <img src={binance} alt="" />
         </div>
         <div className="grid-item">
-        <img src={coinbase} alt="" />
+          <img src={coinbase} alt="" />
         </div>
         <div className="grid-item">
-        <img src={huobi} alt="" />
+          <img src={huobi} alt="" />
         </div>
         <div href="#" className="grid-item">
-        <img style={{maxWidth:'205px'}} src={okey} alt="" />
+          <img src={okey} alt="" />
         </div>
       </div>
     </div>
